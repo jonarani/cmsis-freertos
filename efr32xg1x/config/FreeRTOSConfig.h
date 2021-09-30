@@ -107,7 +107,7 @@ extern uint32_t SystemCoreClock;
 //  <i> Enable callback function call on each idle task iteration.
 //  <i> Callback function vApplicationIdleHook implementation is required when idle hook is enabled.
 //  <i> Default: 0
-#define configUSE_IDLE_HOOK                     0
+#define configUSE_IDLE_HOOK                     1
 
 //  <q>Use tick hook
 //  <i> Enable callback function call during each tick interrupt.
@@ -125,7 +125,9 @@ extern uint32_t SystemCoreClock;
 //  <i> Enable callback function call when out of dynamic memory.
 //  <i> Callback function vApplicationMallocFailedHook implementation is required when malloc failed hook is enabled.
 //  <i> Default: 0
-#define configUSE_MALLOC_FAILED_HOOK            0
+#define configUSE_MALLOC_FAILED_HOOK            1
+
+#define configAPPLICATION_ALLOCATED_HEAP        0
 
 /* Defines needed by FreeRTOS to implement CMSIS RTOS2 API. Do not change! */
 #define configCPU_CLOCK_HZ                      (SystemCoreClock)
